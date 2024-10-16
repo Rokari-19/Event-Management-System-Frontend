@@ -7,21 +7,29 @@
             </span>
             <div class="text-xl">AfroFEST.com</div>
         </div>
-        
+
         <span @click="menuOpen()" class="absolute md:hidden right-6 top-1.5 cursor-pointer text-4xl">
             <i :class="[open ? 'bi bi-x' : 'bi bi-list']"></i>
         </span>
 
-        <ul 
-        class="md:flex md:items-center md:px-0 px-10 md:pb-0 pb-10 md:static absolute  md:w-auto w-full top-14 duration-500 ease-in" 
-        :class="[open ? 'left-0 bg-gray-900' : 'left-[-100%] bg-transparent']"
-        >
+        <ul class="md:flex md:items-center md:px-0 px-10 md:pb-0 pb-10 md:static absolute  md:w-auto w-full top-14 duration-500 ease-in"
+            :class="[open ? 'left-0 bg-gray-900' : 'left-[-100%] bg-transparent']">
             <li class="md:mx-4 md:my-0 my-6">
-                <RouterLink class="text-xl hover:text-green-400" to="/">Events</RouterLink>
+                <RouterLink class="text-xl hover:text-green-400" to="/events">Events</RouterLink>
             </li>
             <li class="md:mx-4 md:my-0 my-6">
                 <RouterLink class="text-xl hover:text-green-400" to="/discover">Discover</RouterLink>
             </li>
+
+            <template v-if="$store.state.isAuth">
+                <router-link to="/account" class="text-xl hover:text-green-400">Account</router-link>
+            </template>
+
+            <template v-else>
+                <router-link to="/login" class="text-xl hover:text-green-400">Log In</router-link>
+            </template>
+
+
             <li class="md:mx-4">
                 <RouterLink class="text-xl hover:text-green-400" to="/calenders">Calenders</RouterLink>
             </li>

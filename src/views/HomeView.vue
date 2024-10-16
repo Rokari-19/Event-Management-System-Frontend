@@ -12,7 +12,7 @@
 import Card from '@/components/Card.vue';
 import axios from 'axios';
 export default {
-  name: 'HomeView',
+  name: 'Events',
   data() {
     return {
       events : []
