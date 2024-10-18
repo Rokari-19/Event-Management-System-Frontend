@@ -25,9 +25,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.pic {
-  border-radius: 3px;
-}
-</style>

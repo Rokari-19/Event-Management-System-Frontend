@@ -26,4 +26,4 @@
 
 </template>
 
-class="hover:underline me-4 md:me-6"
+<!-- class="hover:underline me-4 md:me-6" -->

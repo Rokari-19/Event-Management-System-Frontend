@@ -1,11 +1,14 @@
 <template>
-    <div class="nav bg-gradient-to-b from-gray-700 text-gray-100 py-3.5 px-6 shadow md:flex justify-between 
+    <div class="nav bg-gradient-to-b from-gray-700 text-gray-100 py-3.5 px-24 shadow md:flex justify-between 
     items-center">
         <div class="flex items-center cursor-pointer">
+
             <span class="text-green-400 text-xl mr-1">
                 <i class="bi bi-calendar2-event"></i>
             </span>
-            <div class="text-xl">AfroFEST.com</div>
+            <a href="/">
+                <div class="text-xl">AfroFEST.com</div>
+            </a>
         </div>
 
         <span @click="menuOpen()" class="absolute md:hidden right-6 top-1.5 cursor-pointer text-4xl">
