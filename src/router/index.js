@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import AboutView from '../views/AboutView.vue'
 import Login from '@/views/Login.vue'
 import Events from '@/views/Events.vue'
+import EventDetail from '@/views/EventDetail.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: 'Login',
     component: Login
     // accepts tokens
+  },
+  {
+    path: '/event/:id',
+    name: 'EventDetail',
+    component: EventDetail
   }
 ]
 

@@ -1,6 +1,6 @@
 <template>
     <div class="grid md:grid-cols-3 grid-cols-none ">
-      <Card v-for="item in events" v-bind:key="item.id" v-bind:event="item"/>
+      <Card v-for="event in events" v-bind:key="event.id" v-bind:event="event"/>
     </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
                 .get("/api/v1/events/")
                 .then(response => {
                     this.events = response.data;
-                    console.log(this.events);
+                    // console.log(this.events);
                 })
                 .catch(error => {
                     console.log(error)

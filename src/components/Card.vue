@@ -1,6 +1,6 @@
 <template>
 
-  <RouterLink :to="event.get_absolute_url"
+  <RouterLink :to="{ name: 'EventDetail', params: { id: event.id } }"
     class="items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mx-5 my-5">
     <img class="mx-auto mt-5 rounded-lg h-auto md:h-auto md:w-48 md:rounded-lg md:rounded-lg"
       :src="event.get_event_thumb" alt="">
