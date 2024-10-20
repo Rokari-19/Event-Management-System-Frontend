@@ -5,6 +5,7 @@ import Login from '@/views/Login.vue'
 import Events from '@/views/Events.vue'
 import EventDetail from '@/views/EventDetail.vue'
 import SignUp from '@/views/Sign-up.vue'
+import Discover from '@/views/Discover.vue'
 
 const routes = [
   {
@@ -16,11 +17,6 @@ const routes = [
     path: '/events',
     name: 'events',
     component: Events
-  },
-  {
-    path: '/discover',
-    name: 'discover',
-    component: AboutView
   },
   {
     path: '/login',
@@ -37,6 +33,11 @@ const routes = [
     path: '/event/:id',
     name: 'EventDetail',
     component: EventDetail
+  },
+  {
+    path: '/discover',
+    name: 'Discover',
+    component: Discover
   }
 ]
 

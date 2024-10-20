@@ -25,7 +25,7 @@
             </li>
 
             <template v-if="$store.state.isAuth">
-                <router-link to="/account" class="text-xl hover:text-green-400">Account</router-link>
+                <router-link to="/account/:org" class="text-xl hover:text-green-400">Account</router-link>
             </template>
 
             <template v-else>
@@ -59,6 +59,9 @@ export default {
         }
 
         return { open, menuOpen }
+    },
+    methods: {
+
     }
 
 }
