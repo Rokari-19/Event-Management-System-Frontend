@@ -44,8 +44,8 @@ export default createStore({
 // todo
 /*
 set up welcome component - check
-set up event detail component
-set up sign up page
+set up event detail component - check
+set up sign up page - check
 set up calender page
 set up account page
 set up log out functionality

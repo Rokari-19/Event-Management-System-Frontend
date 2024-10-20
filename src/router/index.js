@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import Login from '@/views/Login.vue'
 import Events from '@/views/Events.vue'
 import EventDetail from '@/views/EventDetail.vue'
+import SignUp from '@/views/Sign-up.vue'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     name: 'Login',
     component: Login
     // accepts tokens
+  },
+  {
+    path: '/signup',
+    name: 'Sign Up',
+    component: SignUp
   },
   {
     path: '/event/:id',
