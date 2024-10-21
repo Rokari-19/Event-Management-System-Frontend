@@ -95,7 +95,7 @@ export default {
                 .get(`/api/v1/events/${id}`)
                 .then(response => {
                     this.event = response.data
-                    // console.log(this.event)
+                    console.log(this.event)
                     document.title = this.event.event_name + ' | AfroFEST.com'
 
                 })
