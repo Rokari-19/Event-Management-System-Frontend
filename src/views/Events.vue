@@ -1,5 +1,5 @@
 <template>
-    <div class="grid md:grid-cols-3 grid-cols-none ">
+    <div class="grid md:grid-cols-3 grid-cols-none">
       <Card v-for="event in events" v-bind:key="event.id" v-bind:event="event"/>
     </div>
 </template>
