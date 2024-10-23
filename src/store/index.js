@@ -49,7 +49,7 @@ set up sign up page - check
 set up calender page
 set up account page
 set up log out functionality
-set up discover page - pending.....
+set up discover page - check
 set up about page
 set up privacy policy
 set up pricing

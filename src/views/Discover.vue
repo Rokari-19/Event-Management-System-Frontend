@@ -44,8 +44,7 @@ export default {
     name: 'Discover',
     data() {
         return {
-            Organizers: [],
-            orgEvents: []
+            Organizers: []
         }
     },
     mounted() {

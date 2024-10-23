@@ -13,48 +13,41 @@
                     class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
 
-                        <h1 class="text-xl font-bold leading-tight tracking-tight text0gray-900 md:text-2xl dark:text-white">
+                        <h1
+                            class="text-xl font-bold leading-tight tracking-tight text0gray-900 md:text-2xl dark:text-white">
                             Create An AfroFEST Account
                         </h1>
 
                         <form class="space-y-4" @submit.prevent="submitForm">
                             <div class="">
-                                <label for="username" class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
+                                <label for="username"
+                                    class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
                                     Your Username
                                 </label>
-                                <input 
-                                    type="username" 
+                                <input type="username"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    v-model="username"
-                                    placeholder="username"
-                                >
-                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
+                                    v-model="username" placeholder="username">
+                                <label for="password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
                                     Type A Password
                                 </label>
-                                <input 
-                                    type="password" 
+                                <input type="password"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    v-model="password"
-                                    placeholder="••••••••"
-                                >
-                                <label for="confirmm" class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
+                                    v-model="password" placeholder="••••••••">
+                                <label for="confirmm"
+                                    class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
                                     Confirmm Your Password
                                 </label>
-                                <input 
-                                    type="password" 
+                                <input type="password"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    v-model="confirm"
-                                    placeholder="••••••••"
-                                >
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
+                                    v-model="confirm" placeholder="••••••••">
+                                <label for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-900 text-center dark:text-white">
                                     Enter Your Email (optional)
                                 </label>
-                                <input 
-                                    type="email" 
+                                <input type="email"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    v-model="email"
-                                    placeholder="example: blank@mail.com"
-                                >
+                                    v-model="email" placeholder="example: blank@mail.com">
                             </div>
                             <button type="submit"
                                 class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
@@ -65,6 +58,9 @@
                                     class="font-medium text-primary-600 hover:underline dark:text-primary-500">Log
                                     In</RouterLink>
                             </p>
+                            <div class="notification is-danger" v-if="errors.length">
+                                <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
+                            </div>
                         </form>
 
                     </div>
@@ -135,7 +131,7 @@ export default {
                     .catch(error => {
                         if (error.response) {
                             for (const property in error.response.data) {
-                                this.errors.push(`${property}: ${error.response.data[property]}`)
+                                this.errors.push(`${error.response.data[property]}`)
                             }
                             console.log(JSON.stringify(error.response.data))
                         } else if (error.message) {
